@@ -38,7 +38,8 @@ static bool _banned_combination(job_type job, species_type species)
     }
 
     if ((job == JOB_SHAPESHIFTER || job == JOB_STALKER)
-        && species::undead_type(species) == US_UNDEAD)
+        && species::undead_type(species) == US_UNDEAD
+        && (species != SP_SILENT_SPECTRE))
     {
         return true;
     }
