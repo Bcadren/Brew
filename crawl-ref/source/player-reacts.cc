@@ -726,7 +726,7 @@ void player_reacts_to_instant_action()
 
 static bool _check_recite()
 {
-    if (you.is_silenced()
+    if (you.is_silenced(true)
         || you.cannot_act()
         || you.confused()
         || you.asleep()

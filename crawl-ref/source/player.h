@@ -953,7 +953,7 @@ public:
     bool cannot_act() const override;
     bool helpless() const override;
     bool confused() const override;
-    bool is_silenced() const override;
+    bool is_silenced(bool silent_cast = false) const override;
 
     bool caught() const override;
     void struggle_against_net() override;
@@ -1100,6 +1100,8 @@ public:
     bool has_usable_tentacle() const override;
 
     bool form_uses_xl() const;
+
+    bool can_silent_cast() const;
 
     virtual void clear_constricted() override;
 

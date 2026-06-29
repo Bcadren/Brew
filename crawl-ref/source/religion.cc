@@ -4644,7 +4644,7 @@ int get_tension(god_type god)
             || you.form == transformation::tree
             || you.form == transformation::jelly,        {2, 1} },
         { you.duration[DUR_VAINGLORY] > 0,               {5, 3} },
-        { you.is_silenced(),                             {5, 3} },
+        { you.is_silenced(true),                             {5, 3} },
         { you.form == transformation::bat
             || you.form == transformation::wisp,         {5, 3} },
         { player_in_branch(BRANCH_ABYSS),                {3, 2} },

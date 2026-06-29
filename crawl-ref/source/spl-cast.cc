@@ -540,6 +540,8 @@ int raw_spell_fail(spell_type spell, bool enkindled, bool include_temp)
                       / 262144, 0);
 
     chance2 -= 2 * you.get_mutation_level(MUT_SUBDUED_MAGIC);
+    if (silenced(you.pos()) && you.can_silent_cast())
+        chance2 += 3;
     chance2 += 4 * you.get_mutation_level(MUT_WILD_MAGIC);
     chance2 += 4 * you.get_mutation_level(MUT_ANTI_WIZARDRY);
     if (you.wearing_ego(OBJ_ARMOUR, SPARM_ENERGY))
@@ -780,7 +782,7 @@ bool can_cast_spells(bool quiet, bool ignore_silence)
         return false;
     }
 
-    if (!ignore_silence && you.is_silenced())
+    if (!ignore_silence && you.is_silenced(true))
     {
         if (!quiet)
         {
