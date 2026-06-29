@@ -423,6 +423,13 @@ int player::silence_radius() const
     return shrinking_aoe_range(duration[DUR_SILENCE]);
 }
 
+int player::demon_silence_radius() const
+{
+    if (you.get_mutation_level(MUT_SILENCE_HALO))
+        return 1;
+    return -1;
+}
+
 int monster::silence_radius() const
 {
     if (type == MONS_SILENT_SPECTRE)
