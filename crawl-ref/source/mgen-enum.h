@@ -151,6 +151,7 @@ enum band_type
     BAND_SEWAGE_SOVEREIGNS,
     BAND_ABYSSAL_ACOLYTES,
     BAND_HERALD_FOLLOWERS,
+    BAND_GIRAFFES,
     NUM_BANDS                   // always last
 };
 

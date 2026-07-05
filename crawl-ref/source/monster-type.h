@@ -1460,6 +1460,7 @@ enum monster_type                      // env.mons[].type
     MONS_CHAOS_BATTLESHAPE,
     MONS_BOREAS,
 #endif
+    MONS_GIRAFFE,
 
     NUM_MONSTERS,               // used for polymorph
 
