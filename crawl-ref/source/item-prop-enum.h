@@ -644,6 +644,9 @@ enum weapon_type
     WPN_HAMMER,
 #endif
     WPN_MACE,
+#if TAG_MAJOR_VERSION > 34
+    WPN_LEIOMANO,
+#endif
     WPN_FLAIL,
     WPN_MORNINGSTAR,
 #if TAG_MAJOR_VERSION == 34
@@ -747,6 +750,7 @@ enum weapon_type
     WPN_PARTISAN,
     WPN_ATHAME,
     WPN_CENTIPEDE,
+    WPN_LEIOMANO,
 #endif
 
     NUM_WEAPONS,
@@ -764,6 +768,17 @@ enum weapon_property_type
     PWPN_HIT,
     PWPN_SPEED,
     PWPN_ACQ_WEIGHT,
+};
+
+enum wpn_flags
+{
+    WPNF_NO_FLAGS = 0x0000,
+
+    // Made of non-metal materials and cannot recieve "flaming" brand.
+    WPNF_WOODEN = 0x0001,
+
+    // Lightweight construction gives an oddly fast mindelay.
+    WPNF_LIGHTWEIGHT = 0x0002,
 };
 
 enum vorpal_damage_type
