@@ -317,8 +317,11 @@ bool is_weapon_brand_ok(int type, int brand, bool /*strict*/)
     if (weapon_has_flag(type, WPNF_LIGHTWEIGHT) && brand == SPWPN_SPEED)
         return false;
 
+    //BCADDO: Tinker here.
+    /*
     if (weapon_has_flag(type, WPNF_WOODEN) && brand == SPWPN_FLAMING)
         return false;
+        */
 
     if (is_demonic_weapon_type(type) && brand == SPWPN_HOLY_WRATH)
         return false;

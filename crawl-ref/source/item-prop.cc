@@ -588,7 +588,7 @@ static const weapon_def Weapon_prop[] =
         }},
     { WPN_GREAT_MACE,        "great mace",         18, -4, 17,
         SK_MACES_FLAILS, SIZE_MEDIUM, NUM_SIZE_LEVELS,
-        DAMV_CRUSHING, 3, 24, 100, M_AND_F_BRANDS },
+        WPNF_NO_FLAGS, DAMV_CRUSHING, 3, 24, 100, M_AND_F_BRANDS },
     { WPN_GIANT_CLUB,        "giant club",         21, -6, 16,
         SK_MACES_FLAILS, SIZE_LARGE, NUM_SIZE_LEVELS,
         WPNF_WOODEN, DAMV_CRUSHING, 1, 25, 21, CLUB_BRANDS },
